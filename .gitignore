@@ -1,0 +1,34 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+*.swp
+
+# Node / tooling (in case you experiment later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build / output (if you ever add a build step)
+dist/
+build/
+.cache/
+.tmp/
+
+# Logs
+logs/
+*.log
+
+# Misc
+.env
+.env.local
+*.bak
+*.tmp

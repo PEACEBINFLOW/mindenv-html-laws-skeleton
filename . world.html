@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>MindsEye Object World – World</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/world.css" />
+    <link rel="stylesheet" href="css/states/core-states.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <!-- Left: World Canvas -->
+      <main id="world-root">
+        <header class="world-header">
+          <h1>MindsEye Object World</h1>
+          <p>HTML as environment, C++ as law, JavaScript as inspector.</p>
+        </header>
+
+        <!-- Navigation objects -->
+        <nav
+          class="world-object nav-object"
+          data-entity-id="nav-root"
+          data-entity-type="NavigationObject"
+          data-entity-label="World Root Navigation"
+        >
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="#appendix-index" data-message="goto:AppendixIndex">Appendix Index</a></li>
+            <li><a href="#appendix-a1" data-message="goto:AppendixA1">Appendix A1</a></li>
+            <li><a href="#appendix-a2" data-message="goto:AppendixA2">Appendix A2</a></li>
+          </ul>
+        </nav>
+
+        <!-- Appendix Index Page -->
+        <section
+          id="appendix-index"
+          class="world-object appendix-page"
+          data-entity-id="A0"
+          data-entity-type="AppendixPage"
+          data-law-entity="AppendixPage"
+          data-entity-label="Appendix Index"
+        >
+          <header>
+            <h2>Appendix Index</h2>
+            <p>This page declares itself as an AppendixPage. Sections below are AppendixSection objects.</p>
+          </header>
+
+          <article
+            class="world-object appendix-section"
+            data-entity-id="A0-1"
+            data-entity-type="AppendixSection"
+            data-law-entity="AppendixSection"
+            data-parent-id="A0"
+            data-order="1"
+            data-title-role="title"
+            data-body-role="body"
+          >
+            <h3 id="title">A0-1: Index Structural Overview</h3>
+            <p id="body">
+              This section exists so that the law engine can confirm that minimal AppendixSection
+              laws are satisfied: id, parent, order, title, and body roles are all declared.
+            </p>
+          </article>
+        </section>
+
+        <!-- Appendix A1 Page -->
+        <section
+          id="appendix-a1"
+          class="world-object appendix-page"
+          data-entity-id="A1"
+          data-entity-type="AppendixPage"
+          data-law-entity="AppendixPage"
+          data-entity-label="Appendix A1 – C++-Influenced Structure"
+        >
+          <header>
+            <h2>Appendix A1 – C++-Influenced Structure</h2>
+            <p>This page is a testbed for AppendixSection laws mapped from C++ definitions.</p>
+            <p class="law-status" data-law-status-for="A1">LAW CHECK: pending</p>
+          </header>
+
+          <article
+            class="world-object appendix-section"
+            data-entity-id="A1-1"
+            data-entity-type="AppendixSection"
+            data-law-entity="AppendixSection"
+            data-parent-id="A1"
+            data-order="1"
+            data-title-role="title"
+            data-body-role="body"
+          >
+            <h3 id="title">A1-1: Structural Law Block</h3>
+            <p id="body">
+              This block should satisfy the minimal AppendixSection law: it has an ID, a parent,
+              an order, and both title/body roles defined.
+            </p>
+          </article>
+
+          <article
+            class="world-object appendix-section"
+            data-entity-id="A1-2"
+            data-entity-type="AppendixSection"
+            data-law-entity="AppendixSection"
+            data-parent-id="A1"
+            data-order="2"
+            data-title-role="title"
+            data-body-role="body"
+          >
+            <h3 id="title">A1-2: Second Structural Block</h3>
+            <p id="body">
+              Another valid section instance, allowing the law checker to confirm ordering and
+              required attributes.
+            </p>
+          </article>
+        </section>
+
+        <!-- Appendix A2 Page (for future experiments) -->
+        <section
+          id="appendix-a2"
+          class="world-object appendix-page"
+          data-entity-id="A2"
+          data-entity-type="AppendixPage"
+          data-law-entity="AppendixPage"
+          data-entity-label="Appendix A2 – MindEnv Skeleton"
+        >
+          <header>
+            <h2>Appendix A2 – MindEnv Skeleton</h2>
+            <p>HTML as environment, C++ as law, JavaScript as inspector.</p>
+            <p class="law-status" data-law-status-for="A2">LAW CHECK: pending</p>
+          </header>
+
+          <article
+            class="world-object appendix-section"
+            data-entity-id="A2-1"
+            data-entity-type="AppendixSection"
+            data-law-entity="AppendixSection"
+            data-parent-id="A2"
+            data-order="1"
+            data-title-role="title"
+            data-body-role="body"
+          >
+            <h3 id="title">Appendix Preview Section</h3>
+            <p id="body">
+              This block represents an appendix section instance defined by C++-style laws but
+              rendered entirely in HTML.
+            </p>
+          </article>
+        </section>
+      </main>
+
+      <!-- Right: Inspector Panel -->
+      <aside id="inspector-root">
+        <header class="inspector-header">
+          <h2>Inspector</h2>
+          <button id="run-law-checks">Run Law Checks</button>
+        </header>
+
+        <section class="inspector-section">
+          <h3>Objects</h3>
+          <ul id="object-list"></ul>
+        </section>
+
+        <section class="inspector-section">
+          <h3>Selected Object</h3>
+          <pre id="object-details">None selected.</pre>
+        </section>
+
+        <section class="inspector-section">
+          <h3>Law Summary</h3>
+          <pre id="law-summary">No checks run yet.</pre>
+        </section>
+      </aside>
+    </div>
+
+    <script type="module" src="js/world.js"></script>
+  </body>
+</html>

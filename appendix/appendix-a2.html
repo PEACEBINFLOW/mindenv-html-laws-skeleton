@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" data-env="mindenv">
+<head>
+  <meta charset="utf-8">
+  <title>Appendix A2 – Broken Law Test</title>
+
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/appendix.css">
+  <link rel="stylesheet" href="../css/states.css">
+</head>
+<body data-law-entity="AppendixPage" data-law-id="A2">
+
+  <header class="zone zone-header">
+    <h1>Appendix A2 – Broken Law Test</h1>
+    <p class="subtitle">
+      This page intentionally violates some laws so the checker can complain.
+    </p>
+  </header>
+
+  <main class="zone zone-main appendix-grid">
+    <section class="zone zone-panel">
+      <h2>Meta</h2>
+      <p>
+        This page is marked as <code>AppendixPage</code> with ID <code>A2</code>,
+        but some sections below will be malformed on purpose.
+      </p>
+      <div id="law-status-A2" class="law-status"></div>
+    </section>
+
+    <section class="zone zone-panel">
+      <h2>Appendix Sections</h2>
+
+      <!-- Missing data-law-parent -->
+      <article class="appendix-block"
+               data-law-entity="AppendixSection"
+               data-law-id="A2-1"
+               data-law-order="1">
+        <h3 data-law-role="title">A2-1: Missing Parent</h3>
+        <p data-law-role="body">
+          This block is missing <code>data-law-parent</code> and should trigger
+          an error in the law checker.
+        </p>
+      </article>
+
+      <!-- Missing body role -->
+      <article class="appendix-block"
+               data-law-entity="AppendixSection"
+               data-law-id="A2-2"
+               data-law-parent="A2"
+               data-law-order="2">
+        <h3 data-law-role="title">A2-2: Missing Body Role</h3>
+        <p>
+          This paragraph has no <code>data-law-role="body"</code>, so the checker
+          should also complain about it.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="zone zone-footer">
+    <small>Appendix A2 – broken law test.</small>
+  </footer>
+
+  <script src="../js/law_check.js"></script>
+  <script src="../js/env.js"></script>
+</body>
+</html>

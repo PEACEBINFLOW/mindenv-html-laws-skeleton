@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" data-env="mindenv">
+<head>
+  <meta charset="utf-8">
+  <title>MindEnv Skeleton – World Root</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/appendix.css">
+  <link rel="stylesheet" href="css/states.css">
+</head>
+<body data-law-entity="WorldRoot" data-law-id="root">
+
+  <header class="zone zone-header">
+    <h1>MindEnv Skeleton</h1>
+    <p class="subtitle">
+      HTML as environment, C++ as law, JavaScript as inspector.
+    </p>
+  </header>
+
+  <main class="zone zone-main world-grid">
+    <section class="zone zone-panel">
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="index.html">World Root</a></li>
+        <li><a href="appendix/appendix-index.html">Appendix Index</a></li>
+        <li><a href="appendix/appendix-a1.html">Appendix A1</a></li>
+        <li><a href="appendix/appendix-a2.html">Appendix A2</a></li>
+      </ul>
+    </section>
+
+    <section class="zone zone-panel" data-law-entity="AppendixPreview" data-law-id="preview-1">
+      <h2>Appendix Preview</h2>
+      <p>
+        This preview block should obey the <code>AppendixSection</code> laws
+        defined in <code>cpp/laws.h</code>.
+      </p>
+      <div class="appendix-block"
+           data-law-entity="AppendixSection"
+           data-law-id="A-preview"
+           data-law-parent="root"
+           data-law-order="1">
+        <h3 data-law-role="title">Appendix Preview Section</h3>
+        <p data-law-role="body">
+          This block represents an appendix section instance, defined by C++-style
+          laws but rendered in HTML.
+        </p>
+      </div>
+      <div id="law-status-root" class="law-status"></div>
+    </section>
+  </main>
+
+  <footer class="zone zone-footer">
+    <small>MindEnv Skeleton – local test, no cloud attached.</small>
+  </footer>
+
+  <script src="js/law_check.js"></script>
+  <script src="js/env.js"></script>
+</body>
+</html>

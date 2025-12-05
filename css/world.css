@@ -1,0 +1,136 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(320px, 1fr);
+  min-height: 100vh;
+}
+
+/* World side */
+
+#world-root {
+  padding: 1.5rem 2rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.world-header {
+  margin-bottom: 1.5rem;
+}
+
+.world-header h1 {
+  margin-bottom: 0.25rem;
+}
+
+.nav-object {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-object ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 0;
+}
+
+.nav-object li {
+  margin-bottom: 0.25rem;
+}
+
+/* Appendix pages */
+
+.appendix-page {
+  margin-bottom: 2rem;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: radial-gradient(circle at top left, #141926, #05060a);
+}
+
+.appendix-page header h2 {
+  margin-bottom: 0.25rem;
+}
+
+.appendix-section {
+  margin-top: 0.75rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.5rem;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.appendix-section h3 {
+  margin-top: 0;
+}
+
+/* Law status */
+
+.law-status {
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Inspector side */
+
+#inspector-root {
+  padding: 1.5rem 1.5rem 1.5rem 1rem;
+  background: #05070f;
+}
+
+.inspector-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#run-law-checks {
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: #f5f5f5;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+#run-law-checks:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.inspector-section {
+  margin-bottom: 1.25rem;
+}
+
+#object-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+#object-list li {
+  padding: 0.3rem 0.45rem;
+  border-radius: 0.45rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+#object-list li:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+#object-details,
+#law-summary {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.85rem;
+  max-height: 200px;
+  overflow-y: auto;
+}

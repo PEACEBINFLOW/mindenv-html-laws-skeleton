@@ -1,0 +1,21 @@
+.subtitle {
+  margin-top: 0.25rem;
+  opacity: 0.8;
+}
+
+.appendix-block {
+  background: #050713;
+  border-radius: 6px;
+  border: 1px solid #22253a;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.appendix-block h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.appendix-block p {
+  margin: 0;
+}

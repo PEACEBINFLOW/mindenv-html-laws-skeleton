@@ -1,0 +1,14 @@
+{
+  "id": "mindseye_patterns_card",
+  "name": "MindsEye Pattern Laws",
+  "version": "0.1.0",
+  "applies_to": ["AppendixPage", "AppendixSection"],
+  "laws": [
+    {
+      "id": "mindseye_pattern_placeholder",
+      "type": "noop",
+      "severity": "info",
+      "description": "Placeholder for future MindsEye-pattern-driven structural laws."
+    }
+  ]
+}

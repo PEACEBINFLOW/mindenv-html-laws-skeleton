@@ -1,0 +1,14 @@
+{
+  "id": "smalltalk_core_card",
+  "name": "Smalltalk Core Messaging Laws",
+  "version": "0.1.0",
+  "applies_to": ["AppendixPage", "AppendixSection", "NavigationObject"],
+  "laws": [
+    {
+      "id": "smalltalk_messageability",
+      "type": "noop",
+      "severity": "info",
+      "description": "Conceptual: every object should be able to receive messages. Implementation to be added later."
+    }
+  ]
+}

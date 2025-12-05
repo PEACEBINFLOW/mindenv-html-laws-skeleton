@@ -1,0 +1,14 @@
+{
+  "id": "appendix_section_card",
+  "name": "Appendix Section Structural Laws",
+  "version": "0.1.0",
+  "applies_to": ["AppendixSection"],
+  "laws": [
+    {
+      "id": "appendix_minimal_structure",
+      "type": "appendix_minimal_structure",
+      "severity": "info",
+      "description": "Each AppendixSection must have id, parent-id, order, title-role, and body-role attributes."
+    }
+  ]
+}

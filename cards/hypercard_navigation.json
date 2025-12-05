@@ -1,0 +1,14 @@
+{
+  "id": "hypercard_navigation_card",
+  "name": "HyperCard-Style Navigation Laws",
+  "version": "0.1.0",
+  "applies_to": ["NavigationObject"],
+  "laws": [
+    {
+      "id": "navigation_has_links",
+      "type": "noop",
+      "severity": "info",
+      "description": "NavigationObject should declare at least one actionable link. Validation can be extended in the law engine."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" data-env="mindenv">
+<head>
+  <meta charset="utf-8">
+  <title>MindEnv Skeleton – Appendix Index</title>
+
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/appendix.css">
+  <link rel="stylesheet" href="../css/states.css">
+</head>
+<body data-law-entity="AppendixRoot" data-law-id="appendix-root">
+
+  <header class="zone zone-header">
+    <h1>Appendix – Index</h1>
+    <p class="subtitle">
+      All appendix sections are required to obey <code>AppendixSection</code> laws.
+    </p>
+  </header>
+
+  <main class="zone zone-main appendix-grid">
+    <section class="zone zone-panel">
+      <h2>Sections</h2>
+      <ul>
+        <li><a href="appendix-a1.html">Appendix A1 – C++-Influenced Structure</a></li>
+        <li><a href="appendix-a2.html">Appendix A2 – Broken Law Test</a></li>
+      </ul>
+    </section>
+
+    <section class="zone zone-panel">
+      <h2>Law Status</h2>
+      <p>
+        This page declares itself as <code>AppendixRoot</code>. The law checker will
+        validate each <code>data-law-entity="AppendixSection"</code> block it finds.
+      </p>
+      <div id="law-status-appendix-root" class="law-status"></div>
+    </section>
+  </main>
+
+  <footer class="zone zone-footer">
+    <small>MindEnv Skeleton – Appendix Index.</small>
+  </footer>
+
+  <script src="../js/law_check.js"></script>
+  <script src="../js/env.js"></script>
+</body>
+</html>
